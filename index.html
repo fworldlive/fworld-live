@@ -3,40 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fworld Live – The Fame World</title>
+  <title>Fworld Live – India's Entertainment App</title>
   <style>
+    :root {
+      --main-color: #6a0dad;
+      --dark-color: #2a003f;
+      --accent: #ff3cac;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #0c0c0c;
+      background: var(--dark-color);
       color: #fff;
     }
     header {
-      background: #111;
-      padding: 20px;
+      background: var(--main-color);
       text-align: center;
+      padding: 30px 10px;
+    }
+    header img {
+      width: 100px;
+      border-radius: 20px;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #ff3cac;
+      margin-top: 10px;
+      font-size: 2em;
     }
     nav {
+      background: #1e0030;
       text-align: center;
       padding: 10px;
     }
     nav a {
       margin: 0 15px;
-      color: #ccc;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
-      color: #ff3cac;
+      color: var(--accent);
     }
     section {
       padding: 40px 20px;
       text-align: center;
+    }
+    h2 {
+      color: var(--accent);
     }
     .features {
       display: flex;
@@ -46,39 +58,35 @@
       margin-top: 20px;
     }
     .feature {
-      background: #1a1a1a;
+      background: #3b0066;
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 10px;
       width: 250px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .download-btns a {
       display: inline-block;
       margin: 10px;
       padding: 12px 20px;
-      background: #ff3cac;
+      background: var(--accent);
       border-radius: 6px;
       color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
-    .download-btns a:hover {
-      background: #ff75b5;
-    }
     footer {
-      background: #111;
+      background: var(--main-color);
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
     }
     .social-icons a {
       margin: 0 10px;
-      color: #ccc;
+      color: #fff;
       text-decoration: none;
-      font-size: 1.2em;
     }
     .social-icons a:hover {
-      color: #ff3cac;
+      color: var(--accent);
     }
     @media(max-width: 600px) {
       .feature {
@@ -90,8 +98,9 @@
 <body>
 
 <header>
+  <img src="logo.png" alt="Fworld Logo" />
   <h1>Fworld Live</h1>
-  <p>The Fame World – Talk. Stream. Play. Go Viral.</p>
+  <p>India's First All-in-One Entertainment App</p>
 </header>
 
 <nav>
@@ -101,30 +110,30 @@
 </nav>
 
 <section id="features">
-  <h2>Our Features</h2>
+  <h2>Features</h2>
   <div class="features">
     <div class="feature">
       <h3>🎤 Voice Chat Rooms</h3>
-      <p>Connect, talk, and enjoy vibrant voice chat rooms with people worldwide.</p>
+      <p>Connect with people across India and the world in live voice chat rooms.</p>
     </div>
     <div class="feature">
       <h3>📸 Post Sharing</h3>
-      <p>Express yourself by sharing images, thoughts, and videos instantly.</p>
+      <p>Share images, posts, and updates with your followers instantly.</p>
     </div>
     <div class="feature">
       <h3>📺 Live Streaming</h3>
-      <p>Broadcast yourself live and engage your audience in real-time.</p>
+      <p>Stream yourself live and interact with your fans in real-time.</p>
     </div>
     <div class="feature">
       <h3>🎮 Gaming</h3>
-      <p>Enjoy trending mobile games and fun challenges with friends.</p>
+      <p>Play and compete in fun games directly in the app.</p>
     </div>
   </div>
 </section>
 
 <section id="download">
   <h2>Download Fworld Live</h2>
-  <p>Available soon on all major platforms</p>
+  <p>Coming soon to Android & iOS!</p>
   <div class="download-btns">
     <a href="#">📱 Google Play</a>
     <a href="#">🍎 App Store</a>
@@ -132,13 +141,12 @@
 </section>
 
 <section id="contact">
-  <h2>Connect With Us</h2>
-  <p>Stay updated and follow our journey!</p>
+  <h2>Contact Us</h2>
+  <p>📍 Mumbai, India<br>
+  📧 <a href="mailto:livefworld@gmail.com" style="color:#fff;">livefworld@gmail.com</a></p>
   <div class="social-icons">
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://twitter.com" target="_blank">Twitter (X)</a>
-    <a href="mailto:contact@fworldlive.com">Email</a>
+    <a href="https://www.instagram.com/fworld_live/profilecard/?igsh=OGJrMDlpdzhnNmow" target="_blank">📸 Instagram</a>
+    <a href="https://youtube.com/@fworldlive?si=SBm11PPtUxSBh68-" target="_blank">▶️ YouTube</a>
   </div>
 </section>
 
