@@ -4,91 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fworld Live – India's Entertainment App</title>
+  <link rel="icon" type="image/png" href="images/flogo.png" />
   <style>
     :root {
-      --main-color: #6a0dad;
-      --dark-color: #2a003f;
+      --main-purple: #6a0dad;
+      --dark-purple: #2a003f;
       --accent: #ff3cac;
     }
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: var(--dark-color);
-      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--dark-purple);
+      color: white;
     }
     header {
-      background: var(--main-color);
+      background: var(--main-purple);
+      padding: 20px;
       text-align: center;
-      padding: 30px 10px;
     }
     header img {
       width: 100px;
       border-radius: 20px;
     }
-    header h1 {
-      margin-top: 10px;
-      font-size: 2em;
-    }
     nav {
       background: #1e0030;
-      text-align: center;
-      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
     }
     nav a {
-      margin: 0 15px;
-      color: #fff;
+      margin: 10px 15px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
       color: var(--accent);
     }
-    section {
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #6a0dad, #2a003f);
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+    .features, .contact, .policies {
       padding: 40px 20px;
       text-align: center;
     }
-    h2 {
+    .features h2, .contact h2 {
       color: var(--accent);
     }
-    .features {
+    .features-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
     .feature {
       background: #3b0066;
       padding: 20px;
       border-radius: 10px;
-      width: 250px;
+      width: 280px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-    .download-btns a {
+    .feature img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .download, .social {
+      text-align: center;
+      padding: 30px;
+      background: var(--main-purple);
+    }
+    .download a, .social a {
       display: inline-block;
       margin: 10px;
       padding: 12px 20px;
       background: var(--accent);
-      border-radius: 6px;
-      color: #fff;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 6px;
+    }
+    .contact p, .policies p {
+      margin: 10px 0;
     }
     footer {
-      background: var(--main-color);
+      background: #1e0030;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
     }
-    .social-icons a {
-      margin: 0 10px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .social-icons a:hover {
-      color: var(--accent);
-    }
-    @media(max-width: 600px) {
+    @media(max-width: 768px) {
       .feature {
         width: 90%;
       }
@@ -98,64 +113,94 @@
 <body>
 
 <header>
-  <img src="flogo.png" alt="Fworld Logo" />
+  <img src="images/flogo.png" alt="Fworld Logo" />
   <h1>Fworld Live</h1>
   <p>India's First All-in-One Entertainment App</p>
 </header>
 
 <nav>
+  <a href="#about">About Us</a>
   <a href="#features">Features</a>
-  <a href="#download">Download</a>
-  <a href="#contact">Contact</a>
+  <a href="#download">Download Now</a>
+  <a href="#privacy">Privacy Policy</a>
+  <a href="#refund">Refund Policy</a>
+  <a href="#terms">Terms & Conditions</a>
+  <a href="mailto:livefworldagency@gmail.com">Apply For Agency</a>
+  <a href="#contact">Contact Us</a>
 </nav>
 
-<section id="features">
-  <h2>Features</h2>
-  <div class="features">
+<section class="hero" id="about">
+  <h1>Welcome to Fworld Live</h1>
+  <p>Explore Voice Chat, Live Streams, Games & Earn Real Money by Your Talent.</p>
+</section>
+
+<section class="features" id="features">
+  <h2>Top Features</h2>
+  <div class="features-grid">
     <div class="feature">
-      <h3>🎤 Voice Chat Rooms</h3>
-      <p>Connect with people across India and the world in live voice chat rooms.</p>
+      <img src="https://source.unsplash.com/300x200/?voicechat" alt="Voice Chat" />
+      <h3>Voice Chat Rooms</h3>
+      <p>Connect in real-time with others across India in public or private rooms.</p>
     </div>
     <div class="feature">
-      <h3>📸 Post Sharing</h3>
-      <p>Share images, posts, and updates with your followers instantly.</p>
+      <img src="https://source.unsplash.com/300x200/?streaming" alt="Live Streaming" />
+      <h3>Live Streaming</h3>
+      <p>Stream your talents and build your fame with live audience interaction.</p>
     </div>
     <div class="feature">
-      <h3>📺 Live Streaming</h3>
-      <p>Stream yourself live and interact with your fans in real-time.</p>
+      <img src="https://source.unsplash.com/300x200/?gaming" alt="Gaming" />
+      <h3>Gaming Fun</h3>
+      <p>Play trending games with users and earn while having fun.</p>
     </div>
     <div class="feature">
-      <h3>💸 Earn Real Money</h3>
-      <p>Monetize your talent by going live and winning games.</p>
+      <img src="https://source.unsplash.com/300x200/?money" alt="Earn" />
+      <h3>Earn Real Money</h3>
+      <p>Get rewards & gifts by performing live or participating in contests.</p>
     </div>
     <div class="feature">
-      <h3>🎮 Gaming</h3>
-      <p>Play and compete in fun games directly in the app.</p>
+      <img src="https://source.unsplash.com/300x200/?socialmedia" alt="Posts" />
+      <h3>Post Sharing</h3>
+      <p>Upload your photos, posts, and stay active with your fan base.</p>
     </div>
   </div>
 </section>
 
-<section id="download">
+<section class="download" id="download">
   <h2>Download Fworld Live</h2>
   <p>Coming soon to Android & iOS!</p>
-  <div class="download-btns">
-    <a href="#">📱 Google Play</a>
-    <a href="#">🍎 App Store</a>
-  </div>
+  <a href="#">📱 Google Play</a>
+  <a href="#">🍎 App Store</a>
 </section>
 
-<section id="contact">
+<section class="policies" id="privacy">
+  <h2>Privacy Policy</h2>
+  <p>Your data is safe with us. We don’t sell user data. <br/> Read full policy on the app.</p>
+</section>
+
+<section class="policies" id="refund">
+  <h2>Refund Policy</h2>
+  <p>For valid concerns, refund will be processed within 7 working days after review.</p>
+</section>
+
+<section class="policies" id="terms">
+  <h2>Terms & Conditions</h2>
+  <p>By using Fworld Live, you agree to our community standards, content policy and earning policy.</p>
+</section>
+
+<section class="contact" id="contact">
   <h2>Contact Us</h2>
-  <p>📍 Mumbai, India<br>
-  📧 <a href="mailto:livefworld@gmail.com" style="color:#fff;">livefworld@gmail.com</a></p>
-  <div class="social-icons">
-    <a href="https://www.instagram.com/fworld_live/profilecard/?igsh=OGJrMDlpdzhnNmow" target="_blank">📸 Instagram</a>
-    <a href="https://youtube.com/@fworldlive?si=SBm11PPtUxSBh68-" target="_blank">▶️ YouTube</a>
-  </div>
+  <p>📍 Location: Borivali, Mumbai</p>
+  <p>📧 Email: <a href="mailto:livefworld@gmail.com" style="color: #ff3cac;">livefworld@gmail.com</a></p>
+</section>
+
+<section class="social">
+  <h2>Follow Us</h2>
+  <a href="https://www.instagram.com/fworld_live/profilecard/?igsh=OGJrMDlpdzhnNmow" target="_blank">📸 Instagram</a>
+  <a href="https://youtube.com/@fworldlive?si=SBm11PPtUxSBh68-" target="_blank">▶️ YouTube</a>
 </section>
 
 <footer>
-  <p>&copy; 2025 Fworld Live. All rights reserved.</p>
+  &copy; 2025 Fworld Live. All rights reserved.
 </footer>
 
 </body>
