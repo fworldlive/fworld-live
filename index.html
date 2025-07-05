@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fworld Live – India's Entertainment App</title>
   <link rel="icon" type="image/png" href="flogo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     :root {
       --main-purple: #6a0dad;
@@ -45,7 +46,7 @@
     .hero {
       text-align: center;
       padding: 50px 20px;
-      background: linear-gradient(to right, #6a0dad, #2a003f);
+      background: url('https://source.unsplash.com/1600x900/?concert,neon') no-repeat center center/cover;
     }
     .hero h1 {
       font-size: 2.5em;
@@ -53,6 +54,11 @@
     }
     .hero p {
       font-size: 1.2em;
+    }
+    #countdown {
+      font-size: 2em;
+      margin-top: 20px;
+      color: var(--accent);
     }
     .features, .contact, .policies {
       padding: 40px 20px;
@@ -76,8 +82,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .feature img {
-      width: 100%;
-      border-radius: 10px;
+      width: 80px;
       margin-bottom: 10px;
     }
     .download, .social {
@@ -93,6 +98,7 @@
       color: white;
       text-decoration: none;
       border-radius: 6px;
+      animation: bounce 2s infinite;
     }
     .contact p, .policies p {
       margin: 10px 0;
@@ -112,13 +118,13 @@
 </head>
 <body>
 
-<header>
+<header class="animate__animated animate__fadeInDown">
   <img src="flogo.png" alt="Fworld Logo" />
   <h1>Fworld Live</h1>
   <p>India's First All-in-One Entertainment App</p>
 </header>
 
-<nav>
+<nav class="animate__animated animate__fadeIn">
   <a href="#about">About Us</a>
   <a href="#features">Features</a>
   <a href="#download">Download Now</a>
@@ -126,36 +132,38 @@
   <a href="#contact">Contact Us</a>
 </nav>
 
-<section class="hero" id="about">
-  <p>Fworld Live App Its Place Where You Can Showcase Your Talent!
-    Explore Voice Chat, Live Streams, Games & Earn Real Money by Your Talent.</p>
+<section class="hero animate__animated animate__zoomIn" id="about">
+  <h1>🚀 Fworld Live is Launching!</h1>
+  <p>Get Ready For India's Biggest Entertainment Revolution 🎉</p>
+  <h2 style="margin-top: 20px;">Launching in:</h2>
+  <div id="countdown"></div>
 </section>
 
 <section class="features" id="features">
   <h2>Top Features</h2>
   <div class="features-grid">
-    <div class="feature">
-      <alt="Voice Chat" />
+    <div class="feature animate__animated animate__fadeInUp">
+      <img src="https://img.icons8.com/fluency/96/voice.png" alt="Voice Chat" />
       <h3>🎤 Voice Chat Rooms</h3>
       <p>Connect in real-time with others across India in public or private rooms.</p>
     </div>
-    <div class="feature">
-      <alt="Live Streaming" />
+    <div class="feature animate__animated animate__fadeInUp">
+      <img src="https://img.icons8.com/fluency/96/video-call.png" alt="Live Streaming" />
       <h3>📺 Live Streaming</h3>
       <p>Stream your talents and build your fame with live audience interaction.</p>
     </div>
-    <div class="feature">
-      <alt="Gaming" />
+    <div class="feature animate__animated animate__fadeInUp">
+      <img src="https://img.icons8.com/fluency/96/controller.png" alt="Gaming" />
       <h3>🎮 Gaming Fun</h3>
       <p>Play trending games with users and earn while having fun.</p>
     </div>
-    <div class="feature">
-      <alt="Earn" />
+    <div class="feature animate__animated animate__fadeInUp">
+      <img src="https://img.icons8.com/fluency/96/money.png" alt="Earn" />
       <h3>💸 Earn Real Money</h3>
       <p>Get rewards & gifts by performing live or participating in contests.</p>
     </div>
-    <div class="feature">
-      <alt="Posts" />
+    <div class="feature animate__animated animate__fadeInUp">
+      <img src="https://img.icons8.com/fluency/96/image.png" alt="Posts" />
       <h3>📸 Post Sharing</h3>
       <p>Upload your photos, posts, and stay active with your fan base.</p>
     </div>
@@ -186,7 +194,7 @@
 
 <section class="contact" id="contact">
   <h2>Contact Us</h2>
-  <p>📍 Location: Mumbai-Banglore-Dubai</p>
+  <p>📍 Location: Mumbai-Bangalore-Dubai</p>
   <p>📧 Support Email: <a href="mailto:livefworld@gmail.com" style="color: #ff3cac;">livefworld@gmail.com</a></p>
 </section>
 
@@ -199,6 +207,24 @@
 <footer>
   &copy; 2025 Fworld Live. All rights reserved.
 </footer>
+
+<script>
+  const targetDate = new Date("August 14, 2025 00:00:00").getTime();
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const gap = targetDate - now;
+    const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+    document.getElementById("countdown").innerHTML =
+      `<strong>${days}</strong>d <strong>${hours}</strong>h <strong>${minutes}</strong>m <strong>${seconds}</strong>s`;
+    if (gap < 0) {
+      document.getElementById("countdown").innerHTML = "We are LIVE now!";
+    }
+  };
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
